@@ -1,0 +1,14 @@
+<header th:fragment="header"
+        class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm"
+        xmlns:th="http://www.w3.org/1999/xhtml">
+    <h5 class="h5 my-0 me-md-auto fw-normal">GTR lovers</h5>
+    <nav class="my-2 my-md-0 me-md-3">
+        <a class="p-2 text-dark" href="/">Главная</a>
+        <a class="p-2 text-dark" href="/blog">Машины</a>
+        <a th:if="${addNews!='jopa'}" th:text="${addNews}" class="p-2 text-dark" href="/add"></a>
+        <a class="p-2 text-dark" href="/about">О нас</a>
+    </nav>
+    <form action="/auth/logout" method="post">
+        <button type="submit">Выйти</button>
+    </form>
+</header>
